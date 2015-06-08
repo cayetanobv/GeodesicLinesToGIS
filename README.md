@@ -1,6 +1,7 @@
 # Geodesic Lines to GIS
 
 [![Build Status](https://travis-ci.org/GeographicaGS/GeodesicLinesToGIS.svg?branch=master)](https://travis-ci.org/GeographicaGS/GeodesicLinesToGIS)
+[![PyPI version](https://badge.fury.io/py/GeodesicLinesToGIS.svg)](http://badge.fury.io/py/GeodesicLinesToGIS)
 
 Computes geodesic lines from start point to end point and stores them in a GIS 
 file (Shapefile and GeoJSON). A geodesic is the shortest path between two 
@@ -12,9 +13,9 @@ There are several libraries to compute geodesic distances solving the geodesic
 inverse problem (to find the shortest path between two given points). 
 I chose Pyproj because it works fine for this purpose and is an interface to a 
 widely used library in the geospatial industry (Proj4 C library). Actually Proj4 C 
-library routines used to compute geodesic distance are a simple transcription 
-from excellent Geographiclib C++ Library writed by Charles Karney. 
-You can see more about this here: 
+library (>= v.4.9.0) routines used to compute geodesic distance are a simple transcription 
+from excellent Geographiclib C++ Library developed by Charles Karney. Proj4 C library < v.4.9.0 
+uses Paul D. Thomas algorithms. You can see more about this here: 
 [GeodeticMusings: a little benchmark of three Python libraries to compute geodesic distances](https://github.com/cayetanobv/GeodeticMusings).
 
 All computations are performed with WGS84 ellipsoid and the CRS (Coordinate 
